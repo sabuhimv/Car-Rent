@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Base Colors */
+/* Border */
+/* Blue */
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  /* SIZES */
+  /* TYPES */
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+.btn.btn-s {
+  padding: 5px 16px;
+}
+.btn.btn-m {
+  padding: 9px 16px;
+}
+.btn.btn-l {
+  padding: 14px 24px;
+}
+.btn.btn-l.btn-l-minimal {
+  color: #596780;
+}
+.btn.btn-l.btn-l-minimal:hover {
+  color: #1a202c;
+  background-color: #D6E4FD;
+}
+.btn.btn-l.btn-l-minimal:active {
+  color: #1a202c;
+  background-color: #90a3bf;
+}
+.btn.btn-l.btn-l-minimal:focus {
+  color: #1a202c;
+  border-color: #D6E4FD;
+}
+.btn.btn-l.btn-l-minimal:disabled {
+  color: #c3d4e9;
+}
+.btn.btn-primary {
+  background-color: #3563E9;
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background-color: #1A37A7;
+}
+.btn.btn-primary:focus {
+  border-color: #CEBEFE;
+}
+.btn.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn.btn-primary:active {
+  border-color: #CEBEFE;
+}
+.btn.btn-secondary {
+  background-color: #fff;
+  border-radius: 4px;
+  border-color: #90a3bf;
+  color: #596780;
+}
+.btn.btn-secondary:hover {
+  color: #1a202c;
+  border-color: #596780;
+}
+.btn.btn-secondary:disabled {
+  border-color: #90a3bf;
+}
+.btn.btn-secondary:active {
+  color: #1a202c;
+  background-color: #D6E4FD;
+}
+.btn.btn-minimal {
+  border: 1px solid transparent;
+  color: #596780;
+}
+.btn.btn-minimal:hover {
+  color: #1a202c;
+}
+.btn.btn-minimal:active {
+  color: #1a202c;
+  background-color: #D6E4FD;
+}
+.btn.btn-minimal:focus {
+  border-color: #c3d4e9;
+  color: #1a202c;
+}
+.btn.btn-minimal:disabled {
+  color: #596780;
+}
+.btn.btn-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 32px 40px 60px;
+}
+header .header-left {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+header .header-left .header-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .header-left .header-search input {
+  border: 1px solid #c3d4e9;
+  outline: none;
+  color: #596780;
+  font-weight: 500;
+  border-radius: 70px;
+  height: 44px;
+  width: 492px;
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 65px;
+  cursor: pointer;
+}
+header .header-left .header-search .search {
+  position: absolute;
+  left: 15px;
+}
+header .header-left .header-search .filter {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+header .header-right {
+  display: flex;
+  gap: 20px;
+}
+header .header-right img {
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  header .header-left {
+    gap: 30px;
+  }
+  header .header-left .header-search input {
+    width: 350px;
+  }
+}
+@media (max-width: 850px) {
+  header .header-right img:nth-child(-n+3) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 32px 24px;
+  }
+}
+@media (max-width: 632px) {
+  header {
+    align-items: flex-start;
+  }
+  header .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .header-left .header-search input {
+    border-radius: 10px;
+  }
+  header .header-left .header-search .filter {
+    border: 1px solid #c3d4e9;
+    right: -50px;
+    padding: 9px;
+    border-radius: 10px;
+  }
+}
+footer {
+  padding: 80px 60px 60px;
+  padding-bottom: 0;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+footer .footer-top .footer-top-left p {
+  font-size: 16px;
+  color: rgba(19, 19, 19, 0.6);
+  padding-top: 16px;
+}
+footer .footer-top .footer-top-right {
+  display: flex;
+  gap: 60px;
+  line-height: 24px;
+  flex-wrap: wrap;
+}
+footer .footer-top .footer-top-right .footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: rgba(19, 19, 19, 0.6);
+}
+footer .footer-top .footer-top-right .footer-item h3 {
+  color: #1a202c;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 15px;
+}
+footer hr {
+  margin: 40px 0px;
+  border-color: rgba(19, 19, 19, 0.1607843137);
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-bottom span {
+  color: #1a202c;
+  line-height: 24px;
+  font-weight: 600;
+}
+footer .footer-bottom div {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 48px 24px 24px;
+  }
+  footer .footer-top {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 48px;
+  }
+  footer .footer-top .footer-top-left br {
+    display: none;
+  }
+  footer hr {
+    display: none;
+  }
+  footer .footer-bottom {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

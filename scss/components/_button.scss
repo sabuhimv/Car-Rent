@@ -1,0 +1,103 @@
+.btn{
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .3s ease-in;
+
+    &:disabled{
+        cursor:not-allowed
+    }
+
+    /* SIZES */
+    &.btn-s{
+        padding: 5px 16px;
+    }
+    &.btn-m{
+        padding: 9px 16px;
+    }
+    &.btn-l{
+        padding: 14px 24px;
+        
+        &.btn-l-minimal{
+            color: $secondary-400;
+            &:hover{
+                color: $secondary-500;
+                background-color: $primary-100;
+            }
+            &:active{
+                color: $secondary-500;
+                background-color: $secondary-300;
+            }
+            &:focus{
+                color: $secondary-500;
+                border-color: $primary-100;
+            }
+            &:disabled{
+                color: $secondary-200;
+            }
+        }
+    }
+
+    /* TYPES */
+    &.btn-primary{
+        background-color: $primary-500;
+        color: $white;
+        
+        &:hover{
+            background-color: $primary-700;
+        }
+        &:focus{
+            border-color: $border-focus;
+        }
+        &:disabled{
+            opacity: .4; 
+            cursor: not-allowed;
+        }
+        &:active{
+            border-color: $border-focus;
+        }
+    }
+    &.btn-secondary{
+        background-color: $white;
+        border-radius: $br-s;
+        border-color:$secondary-300;
+        color: $secondary-400;
+        &:hover{
+            color: $secondary-500;
+            border-color: $secondary-400;
+        }
+        &:disabled{
+            border-color: $secondary-300;
+        }
+        &:active{
+            color: $secondary-500;
+            background-color: $primary-100;
+        }
+    }
+    &.btn-minimal{
+        border:1px solid transparent;
+        color: $secondary-400;
+        &:hover{
+            color: $secondary-500;
+        }
+        &:active{
+            color: $secondary-500;
+            background-color: $primary-100;
+        }
+        &:focus{
+            border-color: $secondary-200;
+            color: $secondary-500;
+        }
+        &:disabled{
+            color: $secondary-400;
+        }
+    }
+
+    // with icon
+    &.btn-with-icon{
+        display: flex;
+        align-items: center;
+    }
+}
